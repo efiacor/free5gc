@@ -47,6 +47,7 @@ Common labels
 */}}
 {{- define "free5gc-upf.labels" -}}
 helm.sh/chart: {{ include "free5gc-upf.chart" . }}
+pod-security.kubernetes.io/warn: restricted
 {{ include "free5gc-upf.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
